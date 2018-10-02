@@ -1,0 +1,47 @@
+<!doctype html>
+
+<!-- This is the HTML5 template that we will use for the remainder of the HTML5 tutorials. -->
+
+<html lang="en">
+
+<head>
+	
+	<meta charset="utf-8" />
+
+	<title>
+		Attribute Selectors
+	</title>
+	
+	
+	<style type="text/css">
+		p[name] {color:blue;}
+		p[name="tnb"] {color:green;}
+		p[name="ind"] {
+			text-indent:30px;
+			color:black;
+		}
+		h2[name] {text-align:center;}
+		
+	</style>
+</head>
+
+
+<body>
+<h2 name="pageHeader">Attribute Selectors in CSS3</h2>
+<p name="ind">In old CSS you could identify elements using a class (such as: <b>.className {color:red;}</b> or <b>p.className {color:red;}</b> ) or an id (such as <b>#idName {color:blue;}</b> ). In CSS3 however, you can use attribute selectors. </p>
+
+<p name="ind">Attribute selectors are a new way to reference elements. This allows you to style any elements of a desired type (such as p, a, h1, etc.) with a desired attribute. For example, if you want to style all paragraphs that have an attribute of name, you would do: <b>p[name] {color:red;}.</b> This will change all paragraphs that have a name attribute specified in their opening tag to have a font color of red. You can further specify this by assigning a value to the name attribute you want to change. So, for example, you could do: <b>p[name="bucky"] {color:brown;}</b> which would only change the paragraphs with a name attribute set to "bucky." This technique can be used with any attribute, not just name.</p>
+
+<p name="ind">CSS3 also allows you to use regular statements. This is hard to explain without an example. <br />
+This is a CSS3 statement to exemplify this: <b>p[name^="bacon"]{color:red;}</b>. The carrot inside of the square brackets indicates that any paragraph with a name attribute that starts with the string "bacon." There are a few other useful CSS3 statements as well. Replacing the carrot with a dollar sign ("<b>$</b>") will only style paragraphs with a name attribute that end with the string "bacon." Lastly, replacing the carrot or dollar sign with an asterisk ("<b>*</b>") will style any paragraph with a name attribute that contains the string "bacon" anywhere within it. </p>
+
+<hr />
+
+<p name="Matt">This text was changed to blue using CSS3's attribute selector. I chose for any paragraph with a name attribute to have a color of blue.</p>
+<p name="tnb">This text was changed to green using a more specific attribute selector which only changed paragraphs with a name of "tnb."</p>
+
+<p> <a href="index.html" title="Home Page">Home</a> </p>
+
+</body>
+
+</html>

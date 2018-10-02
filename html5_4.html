@@ -1,0 +1,40 @@
+<!doctype html>
+
+<!-- Pseudo Classes -->
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+
+	<title>
+		Pseudo Classes
+	</title>
+	
+	
+	<style type="text/css">
+		p:nth-child(3) {color:green;}
+		p:nth-child(even) {color:red;}
+		h2 {text-align:center;}
+	</style>
+	
+</head>
+
+
+<body>
+<h2>Pseudo Classes</h2>
+<hr />
+	<div id="parent">
+		<p class="child">All of these paragraphs are nested within div tags. This means that all 5 of these paragraphs are the children paragraphs of the div element. I did not have to specify any attribute to indicate their child number, but CSS3 knows that this is the paragraph child #1 of the div since it comes first.</p>
+		<p class="child">Paragraph child 2.This was changed using the CSS3 command: <b>p:nth-child(even) {color:red};</b></p>
+		<p class="child">Paragraph child 3. This was changed green using the CSS3 command: <b>p:nth-child(3) {color:green;}</b>.</p>
+		<p class="child">Paragraph child 4. This was changed using the CSS3 command: <b>p:nth-child(even) {color:red};</b></p>
+		<p class="child">Paragraph child 5. This was not affected by the two CSS3 command used.</p>
+	</div>
+
+	
+
+<p> <a href="index.html" title="Home Page">Home</a> </p>
+</body>
+
+</html>

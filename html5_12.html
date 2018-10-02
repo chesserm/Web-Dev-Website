@@ -1,0 +1,88 @@
+<!doctype html>
+
+<!--  -->
+
+<html lang="en">
+
+<head>
+	
+	<meta charset="utf-8" />
+
+	<title>
+		Videos
+	</title>
+	
+	<!--<link rel="stylesheet" href="video.css">-->
+	
+	<script src="videoJS.js"> 
+	</script>
+	
+	<style type="text/css">
+		hgroup {text-align:center;}
+	</style>
+	
+</head>
+
+
+<body>
+	<hgroup>
+		<h1>Videos in HTML5</h1>
+	</hgroup>
+	
+	<p>Please note that the video filetypes accepted by different browsers varies. As a result, adjustments may need to be made based on your browser.</p>
+	
+	<hr />
+	
+	<h3>Basic Video Player </h3>
+	
+	<p>The first option for adding videos to a web page is to use the default video options. It's added with the "video" tags, where the source ("src") attribute is set to the name of the video file. It is important to keep in mind that not all browsers support all video types. Furthermore, YouTube videos are virtually impossible to embed using this technique do to compatibility issues (even on Google Chrome), they will be covered later. The "controls" attribute is added (and not set equal to anything) in order to enable video controls such as: pause/play, fast-forward/backward, volume, and full-screen. Finally, the "width" and "height" attributes can be set to your desired video player size. Also, please note that this particular video is wider than what it appears to be, which is why the controls appear to be wider than the video.</p>
+	
+	<hr />
+	<!--<h3>Customized HTML Video Player</h3>
+	
+	<section id="skin">
+		</video>
+		
+		<nav>
+			<div id="buttons">
+				<button type="button" id="playButton">Play</button>
+			</div>
+			<div id="defaultBar">
+				<div id="progressBar"></div>
+			</div>
+			<div style="clear:both">				
+			</div>
+		</nav>
+		
+	</section>
+	<hr /> -->
+	
+	<!--<p>Above is an example of a custom HTML video player created using the &ltnav&gt tags. </p>-->
+	
+	<h3>Embedding YouTube Videos</h3>
+	
+	<p>Embedding a YouTube video is extremely simple in HTML5. The problem many people encounter is that YouTube uses "iframe" tags to embed their videos instead of a "video" tag. YouTube even makes it extremely simple to embed the video you'd like into your web page. Simply find the video you'd like to embed on YouTube, then right-click on the video and select "copy embed code" to have the HTML5 code added to your clipboard to be pasted into your HTML document. To see more information about the use of iframes, see this <a href="https://stackoverflow.com/questions/37359348/what-are-the-differences-between-using-an-html5-embedded-video-vs-an-iframe-wit">StackOverflow link</a>. Nontheless, the following is the first of Bucky Robert's many videos on XHTML and CSS. They are extremely helpful, and were one of the main resources I used to learn the basics of web development.</p>
+	 
+	 
+	 <iframe width="600" height="500" src="https://www.youtube.com/embed/cqszz_OfAFQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	 <hr />
+	 
+	 
+	 <h3>Allowing YouTube Embedding</h3>
+	 <p>Note that a video uploader on YouTube must authorize their video to be embedded on other sites. For example, the following video's creator did not enable this setting so the video shows up as "unavailable," but the "view on YouTube" link in the bottom right of the video UI works flawlessly. </p>
+	
+	<hr />
+	
+	<h3>Manually Embedding a YouTube Video</h3>
+	<p>If you want to embed a YouTube video and they remove the ability to obtain the embed code by right-clicking, then simply set the "src" attribute of the iframe element to the url of the YouTube video. However, it's not the same url as if you were to just copy and paste the video. You need to type: http://www.youtube.com/embed/ followed by the video id. The video ID can be found in the normal part of a YouTube video's url, just passed the equal sign. <br /> For example, the following is a normal link to a YouTube video (notice that if you click on the link, the same link is in the url box in your browser): <a href="https://www.youtube.com/watch?v=cqszz_OfAFQ&t">https://www.youtube.com/watch?v=cqszz_OfAFQ&t</a>. The video ID of this particular YouTube video is:cqszz_OfAFQ (everything passed the equal sign of the original url). Note that some urls may have an additional equal sign in them. The YouTube ID is the case sensitive, alpha-numeric string between after the first equal sign and stops when you reach a non-alpha-numeric character (such as: %, ^, &, =).</p>
+	
+	<hr />
+	
+	<h3>HTML Video Elements vs. iframes</h3>	
+	<p>HTML video elements rely on a video being hosted locally, and give you control over the video user interface through CSS (and functionality through JavaScript). On the other hand, iframes do not play videos. They work by loading a url that its embedded in a web page (in this case a YouTube video). In terms of YouTube videos, this forces YouTube's UI onto the video (which can be more professional, given YouTube videos are considered standard video forms for a web page). iframes work better for compatibility when compared to HTML video elements (especially since some properties of video elements change based on the version of HTML being run by the browser). This means that iframes are usually the better option for compatibility and overall simplicity (it also significantly reduces the work of the front-end/full-stack engineer to design the video UI (assuming it's not already created before hand in a separate CSS file). </p>
+	
+	
+	<p> <a href="index.html" title="Home Page">Home</a> </p>
+</body>
+
+</html>

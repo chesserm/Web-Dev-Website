@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<!-- Forms -->
+
+<head>
+
+	<style type="text/css">
+		h2 {text-align:center;}
+	</style>
+
+	<title>
+		Form
+	</title>
+	
+	<script type="text/javascript">
+		function validate()
+		{
+			if (document.buckysForm.user.value != "" && document.buckysForm.pass.value != "")
+			{
+				alert("Logging you in (not really)");
+			}
+			else
+			{
+				alert("Please enter your username and password.");
+			}
+			
+		}
+	</script>
+	
+</head>
+
+<body>
+<h2>Forms with Javascript</h2>
+<br />
+<h3>Accessing Forms and Elements</h3>
+<p>In JavaScript an array names forms is automatically created for all of the forms on the web page. This is how to access the forms in the JavaScript code (i.e. document.form[0]). The properties and methods of arrays can then be called on that array (for example: <b>var x = document.form[0].length;</b>). Additionally, if you assign a name to a form, you can use the form name in place of the forms array Furthermore, there is an elements array that is automatically created for each form on the web page and is a property of forms (i.e. <b>var x = document.forms[0].elements[2].name;</b>). Similar to forms, if you assign a name to an element of a form, you can access the element using its name instead of the elements array. </p>
+
+<h3>Form Validation</h3>
+<p>Form validation is surprisingly simple. You create a function to be called as an event handler for a submit button, and within that function, use an if-else statement to see whether or not the values have been correctly entered in the form. This concept is a basic technique that can be propagated to any form element.</p>
+
+<hr />
+<h3>Sample Form With Basic Validation</h3>
+
+<form name="buckysForm">
+	Username: <input type="text" name="user"/> <br />
+	<br />
+	Password: <input type="password" name="pass"/>
+	<br />
+	<br />
+	<input type="submit" value = "Submit!" onclick="validate()"/>
+</form>
+
+
+<script type="text/javascript">
+
+	
+
+</script>
+
+<p><a href="index.html" title="Home Page">Home</a></p>
+
+</body>
+
+
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- This page is used to practice working with images in html -->
+<html>
+
+<head>
+
+<style>
+	h2{text-align:center;}
+</style>
+
+<title>
+	Fourth page
+</title>
+</head>
+
+<body>
+<h2>Images in XHTML</h3>
+
+<hr />
+
+<p>To add images to a web page:
+<ul>
+<li>Use the image tags: <b>&ltimg /&gt</b></li>
+<li>Set the source attribute "src" of the image to the name of the image file (the image file should be stored in the same directory).</li>
+</ul>
+Other optional attributes to set are:
+<ul>
+<li>Height: "height"</li>
+<li>Width: "width"</li>
+<li>You can also redirect to a website when the image is clicked by embedding the image tags inside of anchor tags and setting the "href" option to the URL.</li>
+</ul>
+Here is an example of the code used for the image below: <b> &lta href="http://www.github.com"&gt &ltimg src="github.jpg" height=300 width=300 /&gt &lt/a&gt </b>.
+<ul>
+<li>Anchor tags:<b>&lta&gt &lt/a&gt</b>, surround the image tags so that it can redirect when clicked.</li>
+<li>The hypertext reference attribute of the anchor tags, "<b>href</b>", is set to github.com (clicking this image takes you to github.com).</li>
+<li>The image tags, <b>&ltimg /&gt</b> surround the information directly related to the image.</li>
+<li>The source attribute, "<b>src</b>", is set to "github.jpg" which is the name of the image file of the github logo, which is in the same directory as all of these website files.</li>
+<li>The "<b>width</b>" attribute sets the width of the image to 300 pixels.</li>
+<li>The "<b>height</b>" attribute sets the height of the image to 300 pixels.</li>
+</ul>
+
+</p>
+
+<p name="pic"> <a href="http://www.github.com"><img src="github.jpg" height=300 width=300 /> </a> </p>
+
+<p><a href="index.html" title="Return to the Home Page">Home</a></p>
+
+
+</body>
+
+</html>

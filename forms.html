@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<!-- Forms -->
+
+<head>
+
+	<style type="text/css">
+		
+		h2 {text-align:center;}
+		.labels {font-weight:bold;}
+		.explanation {text-align:center;}
+	</style>
+
+	<title>
+		Page 23
+	</title>
+</head>
+
+<body>
+<p><a href="index.html" title="Home Page">Home</a></p>
+<h2>Forms</h2>
+<p class="explanation">The following is a demonstration of some of the various form elements in XHTML.</p>
+<hr />
+
+	<p>In the opening tag of the form, the action attribute holds the name of the file (script such as JS, Python, PHP). Also, the method attribute holds either "get" or "post", and this is how your browser sends data. This is a topic that is cover in greater detailed later on in the JavaScript and HTML5 sections.</p>
+	<form action="dosomething.py" method="post">
+		<p class="labels">The following is an example of a text box. The input type is "text". You can limit the size of the box as well as limit the amount of characters the user can enter.</p>
+		This is a text box: <input type="text" name="username" size="25" maxlength="25"/>
+		<br />
+		<p class="labels">The following is a demonstration of radio buttons. The input type is "radio" and is used when you only want the user to select one of many options.</p>
+		Male: <input type="radio" name="sex" value="male" />
+		Female: <input type="radio" name="sex" value="female" /> 
+		<br />
+		<p class="labels">The following is a demonstration of check boxes. The input type is "checkbox" and is used when the user can select multiple options.</p>
+		
+		<p>Select the foods that you would like to order!</p>
+		
+		Pizza: <input type="checkbox" name="food" value="pizza" />
+		Steak: <input type="checkbox" name="food" value="steak" />
+		Pasta: <input type="checkbox" name="food" value="pasta" />
+		Wings: <input type="checkbox" name="food" value="wings" />
+ 		Crab legs: <input type="checkbox" name="food" value="crab" />
+		Bacon: <input type="checkbox" name="food" value="bacon" />
+		
+		<p class="labels">The following is a demonstration of drop down lists. The input type is "drop" and helps to conserve space for a long list. It only allows the user to select one option of many. To make a drop down list, you need to add "select" tags, and inside these tags add all of the options. Inside the opening select tag, assign the drop down list a name (name="countries" for example). To add options within the select tags, add option tags for each option. Inside the opening tag, edit the value attribute as you would for any other input element. For each option you add, don;t forget to add a unique "value" within the opening tag.</p>
+		
+		<p>What do you want to do today?</p>
+		<select name="activities">
+			<option value="play">play the guitar</option>
+			<option value="comb">comb your hair</option>
+			<option value="run">go running</option>
+			<option value="shave">shave</option>
+			<option value="eat">eat</option>
+			<option value="sleep">sleep</option>
+			<option value="shower">shower</option>
+			<option value="work">work</option>			
+		</select>
+		
+		<p class="labels">The following is a demonstration of text areas. The input type is "textarea" and is used to provide a larger text area than a textbox. An example of this would be writing a response to a question, writing a description, etc. You need to add a name in the opening tag. To change the default size of the text area, edit the "rows" and "cols" properties within the opening tag.</p>
+		
+		<p>Tell your favorite joke:</p>
+		
+		<textarea name="joke" rows="8" cols="40">
+			Tell your joke here
+		</textarea>
+	
+		<p class="labels">The following demonstrates the password input type. It hides the text being typed, by replacing it with bullets or stars for security. The input type is "password" and don't forget to add a unique "name."</p>
+		Password: <input type="password" name="pass" />
+		
+		<br />
+		
+		<p class="labels">The following demonstrates the file upload button. It allows the user to upload a file to the web server. The input type is "file", and it also will need a unique name. If you want the user to upload multiple files, they need multiple upload buttons.</p>
+		<p>Now submit a file!</p>
+		<input type="file" name="userFile" />
+		
+		<p class="labels">The following will demonstrate how to submit a form with a button. The input type is "submit" and allows the contents of the entire form to be uploaded to the web server. Don't forget to edit the value attribute to change the text on the button. Note that this is going to cause an error that "dosomething.py" couldn't be found. It's because we haven't written a script to do something with this information despite putting that filename in the form's opening tag.</p>
+		 <input type="submit" value="Submit!" />
+		
+		
+	</form>
+
+	
+	
+	
+	<p><a href="index.html" title="Home Page">Home</a></p>
+
+</body>
+
+
+</html>

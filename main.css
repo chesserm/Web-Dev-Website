@@ -1,0 +1,110 @@
+*{
+	/* This removes any default padding or margins that are built into certain elements. */
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+/* Ensures all html tags are properly recognized, and that all elements are block elements and not treated as a line element */
+header, section, footer, aside, nav, article, hgroup {
+	display:block;
+	
+}
+
+/* Centers the main div that wraps everything. This really is only needed to help with older browsers. It ensures compatibility. */
+body {
+	text-align:center;
+}
+
+h1 {
+	font: bold 20px Tahoma;
+}
+
+h2 {
+	font: bold 15px Tahoma;
+}
+
+#big_wrapper {
+	
+	border: 1px solid black;
+	
+	/* Limits max width of website. You want to chose either 960, 980, or 1000 for a good size. 1000 is a good number to do base 10 divisions for organization later. */
+	width: 1000px;
+	
+	/* If setting all margins at once (when using four values), the order is: top, right, bottom, left. "auto" will just fill in whatever the first one is. 
+		You can also edit each using margin-top, etc. */
+	margin: 20px auto;
+	
+	/* Even though the main div box is centered, the contents in the box is now left aligned. */
+	text-align:left;
+	
+	
+}
+
+/* Note that I am using weird colors to make each part stand out while I am laying things out. Will change it to be uniform later. */
+#top_header {
+	background: yellow;
+	border: 1px solid blue;
+	padding: 20px;
+	
+}
+
+#top_menu {
+	background:blue;
+	color:white;
+	
+}
+
+/* To style the contents of the nav bar, you have to specify you want to style the list items within the nav bar 
+(since we organized the elements as unordered list items within the nav bar. */
+#top_menu li {
+	display:inline-block;
+	list-style:none;
+	padding: 5px;
+	font: bold 14px Tahoma;
+	
+}
+
+#main_section {
+	float: left;
+	width: 660px;
+	
+	/* This applies a margin all around the element. Note that this means the main section takes up 720px (account for the width) */
+	margin: 30px; 
+}
+
+#side_news {
+	float:left;
+	width: 220px;
+	
+	/* Top and bottom margins (the margins you affect depend on the number of entries you put (reference:  https://www.w3schools.com/cssref/pr_margin.asp )*/
+	margin: 20px 0px;
+	padding: 30px;
+	
+	/*Note that the border, width, margin, and padding all count towards your total width that you set in big_wrapper*/
+	
+	background: #66CCCC;
+}
+
+#the_footer {
+	
+	/* This clears all of the floating settings. Resets it to default settings of a block-level element.*/
+	clear:both;
+	
+	text-align:center;
+	padding:20px;
+	border-top: 2px solid green;
+}
+
+article {
+	background: #FFFBCC;
+	border: 1px solid red;
+	padding: 20px;
+	margin-bottom: 15px;
+	
+}
+
+article footer {
+	text-align:right;
+	
+}

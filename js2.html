@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<!-- Event Handlers -->
+
+<head>
+
+	<style type="text/css">
+		h2 {text-align:center;}
+	</style>
+
+	<title>
+		Event Handlers
+	</title>
+</head>
+
+<body onload="alert('This event handler occurred as soon as the body loaded!');">
+
+<h2>Event Handlers</h2>
+<p>Event handlers are JavaScript code blocks that run in response to a user action (such as rolling over a button, or clicking a mouse). This JavaScript code does not go inside of the script tags that are up to this point have isolated JavaScript code. These become exceptionally helpful in form elements.</p>
+<hr />
+<p>Event handlers are identified by certain keywords that your browser interprets as JavaScript code to be executed. <br />
+	some of these keywords are:</p>
+	<ul>
+		<li>onclick</li>
+		<li>onchange</li>
+		<li>onmouseover</li>
+		<li>onmouseout</li>
+		<li>onkeydown</li>
+		<li>onload</li>
+		<li>onunload</li>
+	</ul>
+<p>These keywords are placed inside the declaration of the form element and are visually identical to an XHTML attribute. For example, the "onclick" event handler is used to 	create an alert for the button below. <br />The code used to accomplish this is: <b> < input type="button" value="Touch me!" onclick="alert('Hello!');" > </b> <br /> <br />
+Note that multiple lines of code can be put inside of the quotation marks of the event handler. <br />
+So after the semicolon in the example above we could write: <b>... onclick="alert('Hello!'); alert('Hello again!');" ></b></p>
+<form>
+	<input type="button" value="Touch me!" onclick="alert('Hello!');"/>
+</form>
+
+<p>Event handlers are not limited to form elements. Here is an example of the "onmouseover" event handler being used on a link:</p>
+<a href="http://www.google.com" onmouseover="alert('This popped up just by hovering your mouse over the link!');">Hover over me!</a>
+<p>Event handlers can event be put in the body (such as the "onload" event handler).</p>
+
+<p><a href="index.html" title="Home Page">Home</a></p>
+
+</body>
+
+
+</html>

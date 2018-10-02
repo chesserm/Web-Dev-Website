@@ -1,0 +1,121 @@
+<!doctype html>
+
+<!-- This page is used to practice tables in html -->
+<html>
+
+<head>
+<title>
+Fifth Page
+</title>
+</head>
+
+<body>
+<h2>Tables</h2>
+<p> This page demonstrates the use of tables in html. The "table" tags are used to declare the table. The "tr" tags are used to declare rows. <br />
+	Within "tr" tags, "th" tags are used to create a header (header tags, "h1" through "h6" can be used within "th" tags). The "colspan" property can </br>
+	be added to a "th" opening tag to indicate the number of columns you want this cell to span. This is useful for large title cells such as <br />
+	in table 2. More obviously, to enter data the "td" tag is used within a "tr" tag to enter table data. This can be any type of data you'd like. <br />
+	There are additional properties of tables that can be specified within the opening "table" tag. The "border" property sets a border around each <br />
+	cell and the table as a whole. The value to place inside of the "" indicates pixel size of the border (1 is usually sufficient). <br />
+	The "width" property specifies how much horizontal space you want the table to consume on the web page. You can enter a blank number into the "" <br />
+	to indicate pixels or a percentage (i.e. 100%) which will specify percentage of the screen. The "cellpadding" property gives a specified number <br />
+	of pixels between the value in each cell and its cell border. The "cellspacing" property gives space between each cell. Both of these properties <br />
+	are demonstrated in the third table. 
+</p>
+
+<hr />
+
+<table border="1">
+	<tr>
+	<!-- <th> implies table header -->
+		<th>Book</th>
+		<th>Title</th>
+		
+	</tr>
+	<tr>
+		<td>Ender's Game</td>
+		<td>Orson Scott Card</td>
+
+	</tr>
+	<tr>
+		<td>Speaker for the Dead</td>
+		<td>Orson Scott Card</td>
+
+	</tr>
+	<tr>
+		<td>Xenocide</td>
+		<td>Orson Scott Card</td>
+
+	</tr>
+	<tr>
+		<td>Children of the Mind</td>
+		<td>Orson Scott Card</td>
+
+	</tr>
+
+</table>
+
+<hr />
+<!-- Using colspan -->
+<table border="1">
+
+	<tr>
+		<th colspan="2"> <h3> Odd People</h3> </th>
+	
+	</tr>
+	<tr>
+		<th>Type</th>
+		<th>Reason</th>
+		
+	</tr>
+	<tr>
+		<td>Cat People</td>
+		<td>17 Cats is too many</td>
+		
+	
+	</tr>
+	<tr>
+		<td>Loud People</td>
+		<td>Don't play music at 2 am</td>
+	
+	</tr>
+
+
+</table>
+<hr />
+
+<!-- The width property can hold pixels (like shown) or percentage of browser width i.e. 50% or 100% -->
+<!-- Cellpadding gives you space between your content and your border, the value is in pixels -->
+<!-- Cellspacing gives you spaces between the cells themselves -->
+<table border="1" width="500" cellpadding="5" cellspacing="10">
+	<tr>
+		<th>
+			Type
+		</th>
+		<th>
+			Reason
+		</th>
+	
+	</tr>
+	<tr>
+		<td>Cat People</td>
+		<td>17 Cats is too many</td>
+	
+	
+	</tr>
+	<tr>
+		<td>Loud People</td>
+		<td>Don't play music at 2 am</td>
+	
+	
+	</tr>
+
+</table>
+
+<hr />
+
+<p> <a href="index.html" title="Return to Home Page">Home</a>
+
+</body>
+
+</html>

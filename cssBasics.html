@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- First page using CSS -->
+<!-- CSS Stands for Cascading Style Sheet -->
+
+<html>
+<!-- CSS requires the style tag within the head section, and requires the type attribute set to "text/css"-->
+<!-- p is the selector of the CSS element (in this case paragraph text) -->
+<!-- color is the property -->
+<!-- Blue is the value -->
+
+<!-- Note that for some reason I can't put comments inside of the style tags (css won't work) -->
+
+<head>
+<!-- Required for CSS -->
+	<style type="text/css"> 
+		
+		body {
+			background-image:url(landscape.jpeg);
+			background-repeat:no-repeat;
+			background-position:50% 500px;
+			color:blue;
+		}
+		
+		h1 {
+			color:#330000;
+			text-align:center;
+		}
+		
+		p {
+		font-family:arial;
+		line-height:170%;
+		text-indent:25px;
+		}
+		
+		ul {font-weight:bold;}
+		ol {font-style:italic;}
+	</style>
+
+	<title>
+		Seventh Page
+	</title>
+
+</head>
+
+<body>
+<h1>CSS Basics</h1>
+	<p> 
+		This page practices the basics of CSS as demonstrated by Bucky Roberts on his "thenewboston" YouTube channel. To use CSS on a web page, 
+		the style tags must be used within the head tags of the html. Inside the opening style tag, the "type" attribute must be set to "text/css".
+		Within the style tags CSS can modify everything on a webpage by affecting different elements. So if you wanted to make all of the paragraph
+		text blue, this could be accomplished. To actually do this type "p {color:blue;}" this uses p as a selector, color as the property, and blue 
+		as the value. This can be applied to any element such as headers, unordered lists, ordered lists, and even the body. Note that color can also
+		take hexademical values such as #330000. Hexadecimal values require a "#" followed by the 6 digit value. I believe RGB can be used as well, but
+		this was not demonstrated in the tutorials. Note that there are thousands of properties to change via CSS. You can change color of text, background
+		color of the body, italicize and bold text, change text alignment, font, line height, etc. Additionally, images can be added as the background of the body.
+		This is done by changing the background-image property to "url(imageFileName.jpg)". If you don't want the image to repeat, change the "background-repeat" property
+		to "no-repeat;". Changing this property to repeat-x or repeat-y will make the picture repeat along the horizontal or vertical axes. If you keep "no-repeat" on, you 
+		can use the background-position property to change the picture location. This property takes percentage and pixel values for orientation.
+	</p>
+	<ul>
+		<li>
+			This unordered list value was bolded using CSS.
+		</li>
+	</ul>
+	<ol>
+		<li>
+			This ordered list value was italicized using CSS.
+		</li>
+	</ol>
+	
+<a href="index.html" title="Return to the Home Page">Home</a>
+</body>
+
+
+
+
+</html>

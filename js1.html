@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<!-- -->
+
+<head>
+
+	<style type="text/css">
+		h2 {text-align:center;}
+		.code {
+			font-weight:bold;
+		}
+	</style>
+
+	<title>
+		JavaScript Basics
+	</title>
+	
+	
+	<script type="text/javascript">
+		
+		// Constructor Function for an object
+		function person(name, age)
+		{
+			this.name = name;
+			this.age = age;
+			this.yearsUntilRetire = yearsLeft;
+		}
+		
+		//Method for the person class to determine the number of years until retirement
+		function yearsLeft()
+		{
+			var numYears = 65 - this.age;
+			return numYears;
+		}
+		
+		//Creating an instance of a person object
+		var bucky = new person("Bucky Roberts", 24);
+		
+		//Creating an object using an object initializer
+		matthew = {name:"Matthew Chesser", age:19};
+		taylor = {name:"Taylor Swift", age:24};
+		
+	</script>
+	
+</head>
+
+<body>
+	<h2>JavaScript Syntax Basics</h2>
+
+	<p>To write JavaScript, write "script" tags within the body of your HTML document and specify the type attribute to be: "text/javascript" Additionally, it is good practice to put your JavaScript code within HTML comments to improve compatibility with older browsers.</p>
+	<hr />
+	
+	<script type="text/javascript"> 
+	<!--
+		//Comments are written the same as in C++ (to include multi-line comments)
+		document.write("This was written using the document.write(\"\"); function in JavaScript.");
+	//-->
+	</script>
+	
+	<h3>Variables</h3>
+	
+	<p>Variables in JavaScript are declared with the keyword "var" followed by the name of the variable. Variables cannot start with numbers in JavaScript. Notice that there are no pointers in JavaScript. The types of variables available in JavaScript are:</p>
+	<ul>
+		<li>
+			Boolean
+		</li>
+		<li>
+			Integer
+		</li>
+		<li>
+			Double
+		</li>
+		<li>
+			String
+		</li>
+		<li>
+			Array
+		</li>
+		<li>
+			Objects
+		</li>
+		<li>
+			Null
+		</li>
+
+	</ul>
+	
+	<p>To write quotation marks within a string, an escape character is required to be placed in front of the quotation marks that are within the string. The escape character for JavaScript is backslash ("\"). Additionally, note that strings can be concatenated using "+". Furthermore, if you write HTML tags within a string, it will be treated as HTML and not string data.</p>
+	
+	<h3>Variable Scope Basics</h3>
+	<p>You will notice that sometimes the "var" keyword is used to declare a variable and sometimes it isn't. When you use the "var" keyword you are creating a local variable that can only be used within that block of code (this is local scope). Not using that "var" keyword indicates creating a global variable that can be used anywhere within the program (this is global scope). </p>
+	
+	
+	
+	<h3>Functions</h3>
+	
+	<p>Functions in JavaScript are declared using the keyword "function" followed by the function name, parentheses, and then curly braces. An example declaration would be: <b>function doSomething() {} </b>. Like in other languages, functions can be called from inside another function. A simple function is one that creates a pop-up. This is done by calling the "alert()" function.</p>
+	
+	<script type="text/javascript">
+	
+		function funky()
+		{
+			alert("This pop-up was created using the alert() function.");
+		}
+		
+	</script>
+	
+	<p>Buttons execute whatever function you assign their "onclick" attribute to:</p>
+	
+	<form>
+		<input type="button" value="Touch me" onclick="funky()" />
+	</form>
+	
+	<h4>Passing parameters to functions</h4>
+	<p>Passing in variables to functions works as it does within C++. However, you don't need to specify the type of the parameter being passed into the function. There is no way to enforce that a certain type is passed in, so parameters must be manually checked. Multiple parameters are separated by commas.</p>
+	
+	<h4>Return Statements</h4>
+	<p>Return statements in JavaScript work as expected (virtually identical to C++ and Java).</p>
+	
+	<h3>Math Operators</h3>
+	<p>Math operators in JavaScript work as expected without the need of an import (such as cmath for C++). Note that the increment and decrement operators (++ and --) also work both before and after a value. Furthermore, assignment operators such as: +=, -=, /=, *=, and %= all work as in other languages.</p>
+	
+	<h3>Decision Structures</h3>
+	<p>If statements (and if-else statements) in JavaScript work as in C++ and do not require an "endif" keyword, only a block made of curly braces. The standard comparison operators can be used for conditional statements (==, !=, >, <, >=, and <=). These comparison operators can be combined with more complex conditions such as && and ||. <br /> Switches can also be used in JavaScript. They are declared by: <br />
+	<b>switch(variableName) {<br />
+	case "condition goes here": <br />
+	execute code if this condition is true <br />
+	break; <br />
+	default: </br />
+	execute code for situations where no other case is true. <br />
+	}</b></p>
+	
+	<script type="text/javascript">
+		//Example switch
+		switch(food)
+		{
+			case "pizza":
+				document.write("My favorite food is pizza.");
+				break;
+			case "burgers":
+				document.write("My favorite food is burgers.");	
+				break;				
+			case "eggs":
+				document.write("My favorite food is eggs.");
+				break;
+			case "steak":
+				document.write("My favorite food is steak.");
+				break;
+			default:
+				document.write("I guess you don't eat");
+		}
+	</script>
+	
+	<h3>Loops</h3>
+	<p>For loops in JavaScript are very similar to C++. However, the counting variable is not declared strictly. An example declaration of a foor loop is: <b>for(x = 0; x < 10; ++x) { ... }</b> Note that the counting variable inside of a for loop does not require the "var" keyword for its declaration. Otherwise, the format is virtually identical to C++. <br />
+	Furthermore, while loops and do/while loops work as expected (similar to C++). Recall that for and while loops are pre-test loops, and a do/while loop is a post-test loop.
+	</p>
+	
+	<h3>Class Objects</h3>
+	<p>Objects are usually created in the "head" section of the HTML document (inside script tags). This can get confusing if you have prior object-oriented programming knowledge. There are no classes in JavaScript. As a result, functions in JavaScript can behave like constructors and can be called along with the "new" keyword (such as <b>var bucky = new person("Bucky", 24);</b> Since everything in JavaScript (except for primitive data types) are considered objects, the "new" keyword distinguishes between a typical function call and a call to a constructor. If you want a "function" to act as a class for the purpose of calling it to initialize new objects, use the "this" keyword to assign properties to the object (since the this* pointer doesn't exist and is not implied like in C++). The following is the very basic example "person" of creating a person object and then creating an instance of that object. <br />
+	<b> <br />
+	// Creating the object (similar to writing a class in C++) <br />
+	function person(name, age) <br />
+	{ <br />
+		this.name = name; <br />
+		this.age = age;   <br />
+	} <br />
+	<br />
+	// Creating an instance of the object <br />
+	// Notice the new keyword was used to indicate the use of person() as a constructor <br />
+	var bucky = new person("Bucky Roberts", 24); <br />
+	
+	</b></p>
+	<p>Another way to create objects is through the use of object initializers. This is typically used when you are only going to be creating a small amount of objects. These are one line quick ways of initializing objects. They are created without the var or new keywords. <br />
+	To create an object using an object initializer, look at this example: <b>kyle = {name:"Kyle Cheng", age:20};</b> <br />Notice how the properties are assigned values by colons and are separated by commas. </p>
+	
+	<h4>Object Methods</h4>
+	<p>To create a method for an object, declare and write the function as if it were its own standalone function. Then, within the constructor function for this object, create a new property and set it equal to the name of that object method without the parentheses. <br /> 
+	<b>This can be done by doing something such as this.yearsUntilRetirement = objectMethod).</b> <br />
+	Inside of the object method would also likely use the "this" object to access a property of the object instance. It's important to not add the parentheses after the method name when assigning it to a property within the constructor function.</p>
+	
+	<h3>Arrays</h3>
+	<p>Arrays in JavaScript are declared differently than in Java or C++. They are declared using the "Array()" keyword with your values inside the parentheses, separated by commas. <br />
+	An example of an array declaration would be: <b>var people = new Array("Pizza", "Hot Dogs", "Eggs", "Steak", "Candy");</b> <br />
+	<br />Arrays in JavaScript are zero-indexed and are accessed using square brackets like in C++ (i.e. <b>food[0]</b> or <b>food[4]</b> <br />
+	<br />Finally, Arrays can be initialized where the size is specified initially. This is done by: <b>var things = new Array(3);</b> (not having a number in the parentheses creates an empty array).
+	</p>
+	
+	<h4>Array Methods and Properties</h4>
+	<p>Arrays have some built in properties, but the most commonly used one is the length property (no parentheses - its a property not a method). <br />
+	There are also some built in methods for arrays, such as: </p>
+	<ul class="code">
+		<li>sort()</li>
+		<li>concat()</li>
+		<li>join()</li>
+		<li>pop()</li>
+		<li>reverse()</li>
+		<li>push()</li>
+	</ul>
+	<p>The <b>sort()</b> method sorts an array into alphabetical order. This function is designed for strings NOT numerical values. <br />
+	The <b>join()</b> method converts an array to a string with the value separated by a comma. If you pass in a character (such as a dash) as a parameter for the <b>join()</b> method (it will separate the values with that character. <br />
+	The <b>pop()</b> method removes the last element from an array and does not take any parameters. <br />
+	The <b>reverse()</b> method reorganizes the list so that the elements are replaced in the array in reverse order. <br />
+	The <b>push()</b> method adds an element to the end of the array.
+	
+	</p>
+	
+	
+	<h4>Prompt</h4>
+	<p>The prompt function is a built in JavaScript function that opens a pop-up box that gives a dialogue and then prompt them to respond. prompt() takes two parameters. The first parameter is the text to be displayed to "prompt" them to respond, and the second parameter is the default text that appears in the box. It is common practice to leave the second parameter empty ("").<br />
+	For example: <b>var prom = prompt("Enter your name", "")</b> <br /> <br />
+	
+	This can be used to add elements to an array via a prompt box such as: <br /> <br />
+	<b> 
+		//Create the array <br />
+		var arr = new Array(3); <br />
+		<br />
+		//Adding 3 user specified elements to the array using prompt() <br />
+		for(i = 0; i < 3; ++i) { <br />
+			arr[i] = prompt("Add something to the Array", ""); <br />
+		} <br />
+	
+	
+	</b>
+	</p>
+	
+	<h4>Associative Arrays</h4>
+	<p>Associative arrays act as Maps or Dictionaries from other languages such as C++ and Java. For example: <br />
+	<b>var bucky = new Array(); <br />
+	bucky["color"] = "blue"; <br />
+	bucky["food"] = "hot pockets"; </b> <br /> <br />
+	
+	They are "indexed" using the key values such as "color" or "food" like a dictionary or map. They can also be declared as:
+	</p>
+	
+	<h3>Math Objects</h3>
+	<p>Some important math methods are:</p>
+	<ul class="code">
+		<li>Math.sqrt(x)</li>
+		<li>Math.E()</li>
+		<li>Math.PI()</li>
+		<li>Math.log(x)  (natural log)</li>
+		<li>Math.round(x)</li>
+		<li>Math.pow(x,y)</li>
+		<li>Math.abs(x)</li>
+		<li>Math.ceil(x)</li>
+		<li>Math.sin(x)</li>
+		<li>Math.cos(x)</li>
+		<li>Math.min(x,y,z,...,n)</li>
+		<li>Math.max(x,y,z,...,n)</li>
+		<li>Math.random()</li>
+	</ul>
+	
+	<h4>Date Object</h4>
+	<p>The date object holds the current date and time. An important function to use in conjunction with the Date object's method is the setInterval("", 1000) function (which is NOT a part of the Date object). The first parameter is the name of the function you want to execute. The second parameter is the frequency in milliseconds. <br />
+	Here are some important functions from the Date Object:</p>
+		<ul class="code">
+		<li>Date.getDate()</li>
+		<li>Date.getDay()</li>
+		<li>Date.getFullYear()</li>
+		<li>Date.getHours()</li>
+		<li>Date.getSeconds()</li>
+		<li>Date.getMilliseconds()</li>
+		<li>Date.getMinutes()</li>
+		<li>Date.getMonth()</li>
+		<li>Date.getTime()</li>
+		
+	</ul>
+	
+	
+	<p><a href="index.html" title="Home Page">Home</a></p>
+</body>
+
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<!-- Child Selectors -->
+
+<head>
+
+	<style type="text/css">
+		
+		p > a {
+			font-size:30px;
+			color:red;
+		}
+		
+	</style>
+
+	<title>
+		
+	</title>
+</head>
+
+<body>
+<h2>Child Selectors</h2>
+
+<p>Child selectors allow you to specify stylings of an element nested inside an element. So for example, the elements such as h1 or paragraph that are inside the "body" tags are the children of body. To specify this, in the "style" tags of the "head" section, write the parent followed by a greater than sign (">") followed by the name of the child. So, in this example, we changed links within paragraphs to be red and have a font size of 30px. We did this by typing the following within the "style" tags: <b>p > a {font-size:30px; color:red;}</b>. Note that the home link also changed because it's also within a paragraph.</p>
+
+<a href="http://www.reddit.com">Link to Reddit just inside body</a>
+<p> <a href="http://www.amazon.com">Link to amazon within paragraph</a> </p>
+<h3> <a href="http://www.google.com">Link to Google within header</a> </h3>
+
+<p><a href="index.html" title="Home Page">Home</a></p>
+
+</body>
+
+
+</html>

@@ -1,0 +1,67 @@
+body {
+	text-align:center;
+}
+
+#box {
+	
+	width: 120px;
+	height: 75px;
+	margin: 150px auto;
+	background:red;
+	color:#ffffff;
+	opacity: 0.6;
+	padding: 15px;
+	text-align:center;
+	border: 3px solid black;
+	
+	/* This gives a linear gradient background. The first parameter indicates direction and the other two are your colors.
+	  reference: https://www.w3schools.com/css/css3_gradients.asp */
+	/*background: linear-gradient(to bottom, red, blue); */
+	
+	/*You can also use a radial gradient: https://www.w3schools.com/css/css3_gradients.asp (scroll halfway down) */
+	
+	/* Property to round corners (larger px => bigger rounds) */
+	border-radius: 10px; 
+	
+	/* This creates a shadow. The first value is the color of the shadow, followed by the shift left or right (negative is left), and the last is up or down (negative is up), and the last value is the amount of gradient. There is an additional last property called "inset" which puts the shadow inside the box. */
+	/*box-shadow:rgb(110, 110, 110) 8px 8px 10px; */
+	
+	
+	/* An outline is similar to a border, but goes outside the border. It "outlines" the border. */
+	/*outline: 2px solid blue; */
+	
+	/* Transformations allow you to scale, rotate, and change the object */
+	
+	/* Scale will scale the size of an element by the mulitplier you give it (you can also give two values for an x and y axis multiplier) */
+	/* transform:scale(1.5); */
+	
+	/* Rotate accepts a degree value (i.e. 45deg) and rotates the element that many degrees clockwise for positive numbers and counterclockwise for negative numbers */
+	/* transform:rotate(45deg); */
+	
+	/* Skew accepts a degree input (i.e. 30deg) and just sort of messes it up. It's rarely ever used. */
+	/* transform:skew(30deg); */
+	
+	/* Translate moves an object. You normally give it two values (typically pixels) to move the element on the x and y axes. */
+	/*transform:translate(300px, 300px); */
+	
+	/* Tells CSS3 that this is the box's initial condition and to change it's properties later (such as when hovered over) over the course of 2 seconds  */
+	/* transition: -moz-transform 2s; */
+	
+	transition: -moz-transform 2s, opacity 2s, background 2s, width 2s, height 2s;
+}
+
+/* Anything in this code block will take affect once the mouse "hovers" over the specified element (in this case a box) */
+#box:hover {
+	
+	transform:rotate(360deg);
+	opacity: 1;
+	background: #1ec7e6;
+	width: 450px;
+	height: 110px;
+}
+
+
+#text {
+	font: bold 30px Century Gothic;
+	text-shadow:rgb(110, 110, 110) 3px 3px 5px;
+}

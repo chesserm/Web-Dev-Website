@@ -1,0 +1,41 @@
+<!doctype html>
+
+<!-- -->
+
+<html lang="en">
+
+<head>
+	
+	<meta charset="utf-8" />
+
+	<title>
+		CSS3 Selectors
+	</title>
+	
+	
+	
+	<style type="text/css">
+		div > p {color:green;}
+		h2 {text-align:center;}
+	</style>
+</head>
+
+
+<body>
+	<h2>New CSS3 Selectors</h2>
+	<hr />
+	<p>The following are common CSS3 selectors illustrated with a basic example:</p>
+
+	<ul>
+		<li><b>div > p</b> the greater than sign ("<b>></b>") affects the paragraphs that are children of a div element. Only works with a direct parent, NOT a grandparent.</li>
+		<li><b>p.bucky + p</b> the plus sign ("<b>+</b>") only affects the paragraphs that immediately follow a paragraph of class "bucky." They both MUST share the same parent. </li>
+		<li><b>p.bucky ~ p</b> the tilde ("<b>~</b>") affects the paragraphs that follow a paragraph of class "bucky," but does NOT need to immediately follow the "bucky" paragraph.</li>
+	</ul>
+	
+
+
+
+<p> <a href="index.html" title="Home Page">Home</a> </p>
+</body>
+
+</html>

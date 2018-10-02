@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<!-- Using div -->
+<!-- "top" moves the top of this element down and "left" moves the element's left border to the right by the specified distance-->
+ 
+<head>
+
+	<style type="text/css">
+		div {
+			border: red 2px solid;
+			position:absolute;
+			width:100px;
+			top:300px;
+			left:35px;
+		}
+		
+		#bobby {
+			border: 2px solid blue;
+			position:absolute;
+			top:300px;
+			left:300px;
+		}
+		
+		h2 {text-align:center;}
+		
+	</style>
+
+	<title>
+		Fourteenth Page
+	</title>
+</head>
+
+<body>
+<h2>Using div and ID's</h2>
+
+<p>divs are used to position different elements around the screen based on pixel coordinates (the top left of the screen is 0px, 0px). If you have mulitple elements you'd like to position differently, use ID's. To do this, declare an ID in the "style" tags of the "head" section of your HTML document by writing a pound sign ("#") followed by whatever name you'd like to use for the ID. After words, add the curly braces and specify the properties you'd like to change. Then, in the opening tag of the div element you'd like to change, type the following: <b> id="idName"</b>. Be careful to make sure you don't include the pound sign in the opening tag.</p>
+
+<div>This is div 1.</div>
+
+<div id="bobby">This is div 2.</div>
+
+<p><a href="index.html" title="Home Page">Home</a></p>
+
+</body>
+
+
+</html>
