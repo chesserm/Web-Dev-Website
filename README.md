@@ -3,10 +3,10 @@ Web Development Tutorial Website
 by: Matthew Chesser (Github: chesserm)
 
 
-This project is a way for me to practice my web development knowledge and skills as I use them. I hope to display the information in an informative way that can almost act as a guide for websites. 
+This project is a way for me to practice my web development knowledge and skills as I learn them. I hope to display the information in an informative way that can almost act as a guide for others who are new to web development. 
 
 
-My current knowledge is extremely basic, but I'm committed to learning web development tools from the ground up. This will give me a better understanding of how websites work from the inside out. I hope to present my knowledge in this website in a way that others can benefit from it as well.
+My current knowledge of web development is extremely basic, but I'm committed to learning web development tools from the ground up. This will give me a better understanding of how websites work from the inside out. I hope to present my knowledge in this website in a way that others can benefit from it as well.
 
 
 Current version:
